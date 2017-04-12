@@ -1,4 +1,6 @@
-{-# LANGUAGE ExistentialQuantification #-}
+{-
+    TEST SUITE GIVEN BY IMPERIAL COLLEGE LONDON DEPARTMENT OF COMPUTING
+-}
 module IC.TestSuite where
 
 import Control.Exception
