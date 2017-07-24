@@ -71,7 +71,7 @@ diff (UnApp unop e) s
   | unop == Log       = BinApp Div (diff e s) e
 
 taylor :: Exp -> Double -> Double -> Int -> Double
-taylor e x a n = sum (zipWith (*) (zipWith (/) fas facts) as)
+taylor e x a n = sum (zipWith3 (\x y z -> x*y/z) fas facts as)
   where
   as    = 1 : iterate (*(x-a)) (x-a)
   facts = 1 : zipWith (*) facts [1..(fromIntegral (n-1))]
